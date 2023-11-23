@@ -14,6 +14,7 @@ void setup(){
   size(400,400);
   background(99, 171, 219);
   frameRate(30);
+ 
   
    r = 72;
    g = 116;
@@ -51,9 +52,12 @@ void draw(){
   
   if(mousePressed == true){
     W.sun();
+    wL.waterLevelDownMovement();
     r = 115;
     g = 179;
     b = 235;
+    
+    
     
   } else {
     R.rainShower();
