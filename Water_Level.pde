@@ -16,6 +16,9 @@ class waterLevel{
   
   void waterLevelDownMovement() {
     waterLevelPosition.add(waterLevelDown);
+    if(waterLevelPosition.y > 400){
+      waterLevelPosition.y = 400;
+    }
   }
   
   void waterDrawing() {
