@@ -14,7 +14,7 @@ void setup(){
   size(400,400);
   background(99, 171, 219);
   frameRate(30);
- 
+  println("Press the mouse to reduce water level");
   
    r = 72;
    g = 116;
@@ -47,6 +47,7 @@ void draw(){
   W.character();
   wL.waterLevelMovement();
   wL.waterDrawing();
+  wL.lossScreen();
    
   //This is what pulls the rain variable and uses the class to draw the rain all over the screen
   
