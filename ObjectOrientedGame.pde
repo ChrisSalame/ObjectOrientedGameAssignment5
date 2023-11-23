@@ -6,6 +6,8 @@ Rain R = new Rain();
 
 weatherMan W = new weatherMan();
 
+  boolean wLMaxHeight = false;
+  boolean wLReset = false;
   float r;
   float g;
   float b;
@@ -62,9 +64,17 @@ void draw(){
     
   } else {
     R.rainShower();
+    wL.waterDrawing();
     r = 72;
     g = 116;
     b = 184;
   }
   
+}
+
+void keyReleased() {
+  if ((mousePressed == false) && (wLMaxHeight == true)) {
+    wLReset = true;
+    
+  } 
 }

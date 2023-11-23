@@ -27,12 +27,23 @@ class waterLevel{
   
   void lossScreen() {
     if(waterLevelPosition.y <= 180){
-      fill(66, 120, 245);
+      fill(0, 0, 0);
       textSize(60);
       text("YOU LOSE", 80, 120);
-      waterLevelPosition.y= 180;
+      println("Press any key to restart");
+      waterLevelPosition.y = 180;
       mousePressed = false;
+      wLMaxHeight = true;
     }
+    
+    if(wLReset == true){
+      waterLevelPosition.y += 220;
+      wLReset = false;
+      wLMaxHeight = false;
+      
+    
+    }
+    
     
   }
   
