@@ -32,14 +32,8 @@ class waterLevel{
       text("YOU LOSE", 80, 120);
       waterLevelPosition.y= 180;
       mousePressed = false;
-    
-    
-    } else {
-      
-    
     }
-  
-  
+    
   }
   
 
