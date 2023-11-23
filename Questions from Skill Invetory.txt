@@ -1,0 +1,13 @@
+19. For loops are loop statements that rely on some sort of variable like an int to work by looping something “for” however many its set too. While loops loop the assignment while a condition is met such as a true or false statement, while (Blank) is true loop the code.
+22. A parameter is what you input into a function while an argument is what the function spits back out.
+25. An object is what is inside of a class which leads it to the main code when called upon. When the player calls a class it pulls the code and makes an object with it when it's used.
+26. Constructor functions are used to edit and create the objects that classes make. Contructers allow the user to change variables inside of the object such as int statements and values.
+27.Having each class in its own tab is not just easier to access and manage but easier to program with as each section of the object you want to access is all sorted and doesn’t overlap.
+31. Arraylist can be any length and added to at almost any time within the code. They don’t have a max while arrays do.
+32. This could help you access what is in the array from newest/ newly added to the oldest ones added in the list.
+42. This vector only works based on moving by 1, so if you use this it will always add 1 to whatever it is moving.
+
+
+
+
+
