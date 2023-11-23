@@ -1,3 +1,5 @@
+waterLevel wL = new waterLevel();
+
 cloud CL= new cloud();
 
 Rain R = new Rain();
@@ -24,7 +26,6 @@ void setup(){
 void draw(){
   background(r, g,b);
   
-  
   //This starts the clouds movement in the background of the picture using PVector
    CL.cloudMovement();
    CL.showCloud();
@@ -43,7 +44,9 @@ void draw(){
   
   //This draws the little character
   W.character();
-  
+  wL.waterLevelMovement();
+  wL.waterDrawing();
+   
   //This is what pulls the rain variable and uses the class to draw the rain all over the screen
   
   if(mousePressed == true){
