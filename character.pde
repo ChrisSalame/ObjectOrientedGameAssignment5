@@ -26,8 +26,9 @@ class weatherMan{
   void sun(){
     noStroke();
     fill(227, 220, 79);
+    ellipseMode(CENTER);
     //This is the glowing top part of the staff
-    circle(291,180,12);
+    ellipse(20,20,60,60);
     
     //This draws the shaddow
     fill(87, 92, 89);
