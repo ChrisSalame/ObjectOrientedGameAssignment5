@@ -63,6 +63,7 @@ void draw(){
     
     
   } else {
+    R.rainSpawner();
     R.rainShower();
     wL.waterDrawing();
     r = 72;

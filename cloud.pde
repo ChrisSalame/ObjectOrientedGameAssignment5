@@ -1,8 +1,9 @@
 
-class cloud{
-  
   PVector cloudPosition;
   PVector cloudVelocity;
+
+class cloud{
+  
   
   //These are the created variables that are needed to move the clouds
   //from left to right at differing speeds

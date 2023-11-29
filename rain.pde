@@ -1,14 +1,22 @@
+
+ArrayList<Rain> rainDrops = new ArrayList<Rain>();
+
+float startingX = random(0,400);
+float fallSpeedY = 2.5;
+
+float rainDropX;
+float rainDropY;
+
+
 class Rain{
-    //This sets the array list
-    ArrayList<Rain> rainDrops;
-    
-    //Since there cannot be 2 void setups I made this function for rain so that I could set the neccacary variables
-    void rainSetup(){
-      
-      //This is setting the rainDrop varibale so I can use it to add to Rain later
-      rainDrops = new ArrayList<Rain>();
+
+  //the position of the balls based on speed 
+  //update particle position
+  void rainSpawner(){
+    rainDropX = startingX;
+    rainDropY += fallSpeedY;
   }
- //This void is what adds the raindrops over onto the main tab of the object based toy
+    
     void rainShower(){
       
       noStroke();
@@ -17,14 +25,22 @@ class Rain{
       //This loops makes it so that it adds rainDrops until it reaches 100 then it sits at it. I couldn't get it to function
       //how I wanted so I had to make it so that some circles appeared on the screen.
        
-      for (int i = 0; i > 100; i ++);{
-        circle(random(0,400),random(0,400),10);
-        circle(random(0,400),random(0,400),10);
-        circle(random(0,400),random(0,400),10);
-        circle(random(0,400),random(0,400),10);
-        circle(random(0,400),random(0,400),10);
-        circle(random(0,400),random(0,400),10);
+      for (int i = 0; i > 100; i = i+= 1);{
+        if(rainDropY >= 400){
+        rainDropY = 0;
       }
+      
+        for(int j = 0; j <15;j = j+= 1){
+          circle(rainDropX + random(-400,400),rainDropY+ random(-400,400),10);
+           println("this is i", j);
+          
+          if(j >= 12){
+            break;
+          }
+        }
+        
+      }
+      
     }
 
 }
