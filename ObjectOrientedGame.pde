@@ -1,9 +1,8 @@
+
+//These are calling the classes from the other tabs
 waterLevel wL = new waterLevel();
-
 cloud CL= new cloud();
-
 Rain R = new Rain();
-
 flag F = new flag();
 
 weatherMan W = new weatherMan();
