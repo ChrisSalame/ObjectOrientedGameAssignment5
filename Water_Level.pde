@@ -41,6 +41,7 @@ class waterLevel{
       waterLevelPosition.y = 180;
       mousePressed = false;
       wLMaxHeight = true;
+      flagKey = 0;
     }
     
     //This is what resets the water level

@@ -4,6 +4,7 @@ waterLevel wL = new waterLevel();
 cloud CL= new cloud();
 Rain R = new Rain();
 flag F = new flag();
+shark S = new shark();
 
 weatherMan W = new weatherMan();
 
@@ -63,6 +64,7 @@ void draw(){
   if(mousePressed == true){
     W.sun();
     wL.waterLevelDownMovement();
+    wL.waterDrawing();
     r = 115;
     g = 179;
     b = 235;
@@ -73,6 +75,10 @@ void draw(){
     r = 72;
     g = 116;
     b = 184;
+  }
+  
+  if (wLMaxHeight == true){
+  S.sharkDrawing();
   }
   
 }

@@ -3,7 +3,7 @@
 float flagR;
 float flagG;
 float flagB;
-int flagKey = 0;
+int flagKey = 1;
 
 class flag{
   //This void sets the flag to default colors
@@ -22,6 +22,11 @@ class flag{
     
     //This switch statment makes it so that the color of the flag changes when the flag R G B change.
     switch(flagKey){
+      case 0:
+      flagR = 201;
+      flagG = 45;
+      flagB = 34;
+      break;
       case 1:
       flagR = 201;
       flagG = 45;
