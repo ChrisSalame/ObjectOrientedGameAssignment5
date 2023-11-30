@@ -1,8 +1,6 @@
 class weatherMan{
   
-  float r;
-  float g;
-  float b;
+
   void character(){
     //This line draws the little character at the end of the clif
     //This draws the arm
@@ -28,7 +26,7 @@ class weatherMan{
     fill(227, 220, 79);
     ellipseMode(CENTER);
     //This is the glowing top part of the staff
-    ellipse(20,20,60,60);
+    ellipse(291,180,12,12);
     
     //This draws the shaddow
     fill(87, 92, 89);
@@ -39,8 +37,8 @@ class weatherMan{
     fill(73, 191, 108);
     triangle(310,190,300,235,330,235);
     
-    //These are the sun that is created at the top left as well as the sun beams that come off of it in order from bottom left to 
-    //top right
+    //These are the sun that is created at the top left as well as the sun beams that come off 
+    //of it in order from bottom left to top right
     fill(227, 220, 79);
     circle(0,0,150);
     triangle(20,15,50,400,100,400);

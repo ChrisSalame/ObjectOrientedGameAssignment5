@@ -1,33 +1,37 @@
 class waterLevel{
   
+  //These are the pvectors which allow me to move the water level up and down
   PVector waterLevelPosition;
   PVector waterLevelVelocity;
   PVector waterLevelDown;
   
+  //This constructor helps define the values that go inside of the PVectors previously made so that 
+  //they are ready to be used in the following voids
     waterLevel(){
   waterLevelPosition = new PVector(0,390);
   waterLevelVelocity = new PVector(0,-0.75);
   waterLevelDown = new PVector(0,1.75);
   }
-  //this void is what has the water level move from bottom to top of the screen
+  //this void is what has the water level move from bottom upwards
   void waterLevelMovement() {
     waterLevelPosition.add(waterLevelVelocity);
   }
-  
+  //This is what allows the water level to move downward and is called upon during the mouse 
+  //pressed in the main tab
   void waterLevelDownMovement() {
     waterLevelPosition.add(waterLevelDown);
     if(waterLevelPosition.y > 400){
       waterLevelPosition.y = 400;
     }
   }
-  
+  //This is what draws the water
   void waterDrawing() {
     noStroke();
     fill(66, 215, 245);
     rect(waterLevelPosition.x -25, waterLevelPosition.y , waterLevelPosition.x + 450, waterLevelPosition.y+850);
   
   }
-  
+  //This is the loss screen that plays when the water level reaches the players head.
   void lossScreen() {
     if(waterLevelPosition.y <= 180){
       fill(0, 0, 0);
@@ -39,6 +43,7 @@ class waterLevel{
       wLMaxHeight = true;
     }
     
+    //This is what resets the water level
     if(wLReset == true){
       waterLevelPosition.y += 220;
       wLReset = false;

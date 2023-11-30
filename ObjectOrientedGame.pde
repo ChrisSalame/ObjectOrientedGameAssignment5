@@ -20,11 +20,12 @@ void setup(){
   frameRate(30);
   println("Press the mouse to reduce water level");
   
+  //This sets up th ergb settings which are used for the background so it changes color when the 
+  //sun is used as well as seting up the neccacary variables for the flag
    r = 72;
    g = 116;
    b = 184;
    F.flagSetup();
-   F.flagPole();
   
   
   
@@ -32,14 +33,15 @@ void setup(){
 
 void draw(){
   background(r,g,b);
-  //This starts the clouds movement in the background of the picture using PVector
+  //This starts the clouds movement in the background of the picture using PVector as well as
+  // drawing the flagpole that stands behind the player
    CL.cloudMovement();
    CL.showCloud();
    F.flagPole();
 
   
   
-  //This is the platform
+  //This is the platform which the player is on
   fill(186, 196, 204);
   rect(325,225, 175, 60);
   fill(158, 171, 181);
@@ -48,13 +50,16 @@ void draw(){
   rect(275,225, 200, 20);
   
   fill(145, 196, 230);
-  //This draws the little character
+  
+  //This draws the player character, the water level, the water movement and the loss screen if it occurs.
   W.character();
   wL.waterLevelMovement();
   wL.waterDrawing();
   wL.lossScreen();
    
-  //This is what pulls the rain variable and uses the class to draw the rain all over the screen
+  //This if statment is what draws the rain and the water level if the mouse is not pressed. If it is, 
+  //it draws the sun and reduces the water level. The if statment also changes the rgb values which are used for the
+  //background of the game
   
   if(mousePressed == true){
     W.sun();
@@ -62,9 +67,6 @@ void draw(){
     r = 115;
     g = 179;
     b = 235;
-    
-    
-    
   }else {
     R.rainSpawner();
     R.rainShower();
@@ -76,6 +78,8 @@ void draw(){
   
 }
 
+//This void is what allows the player to reset the game. The if statment inside makes it so that if the player has lost
+//they can press any key to restart the game
 void keyReleased() {
   if ((mousePressed == false) && (wLMaxHeight == true)) {
     wLReset = true;
@@ -83,6 +87,7 @@ void keyReleased() {
   } 
 }
 
+//This changes the color of the flag behind the player
 void mouseReleased(){
   flagKey += 1;
   if (flagKey >= 9){
