@@ -65,7 +65,7 @@ void draw(){
     
     
     
-  } else {
+  }else {
     R.rainSpawner();
     R.rainShower();
     wL.waterDrawing();
@@ -80,5 +80,12 @@ void keyReleased() {
   if ((mousePressed == false) && (wLMaxHeight == true)) {
     wLReset = true;
     
+  } 
+}
+
+void mouseReleased(){
+  flagKey += 1;
+  if (flagKey >= 9){
+  flagKey = 1;
   } 
 }
