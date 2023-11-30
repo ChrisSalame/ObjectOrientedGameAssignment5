@@ -26,6 +26,7 @@ class Rain{
       //how I wanted so I had to make it so that some circles appeared on the screen.
        
       for (int i = 0; i > 100; i = i+= 1);{
+        circle(rainDropX + random(-400,400),rainDropY+ random(-400,400),10);
         if(rainDropY >= 400){
         rainDropY = 0;
       }

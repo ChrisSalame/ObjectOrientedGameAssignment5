@@ -4,6 +4,8 @@ cloud CL= new cloud();
 
 Rain R = new Rain();
 
+flag F = new flag();
+
 weatherMan W = new weatherMan();
 
   boolean wLMaxHeight = false;
@@ -21,17 +23,19 @@ void setup(){
    r = 72;
    g = 116;
    b = 184;
+   F.flagSetup();
+   F.flagPole();
   
   
   
 }
 
 void draw(){
-  background(r, g,b);
-  
+  background(r,g,b);
   //This starts the clouds movement in the background of the picture using PVector
    CL.cloudMovement();
    CL.showCloud();
+   F.flagPole();
 
   
   
@@ -44,7 +48,6 @@ void draw(){
   rect(275,225, 200, 20);
   
   fill(145, 196, 230);
-  
   //This draws the little character
   W.character();
   wL.waterLevelMovement();

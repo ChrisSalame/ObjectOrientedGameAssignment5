@@ -20,7 +20,7 @@ class cloud{
     //This resets the clouds position if it goes off screen
     if (cloudPosition.x > 475){
     cloudPosition.x = -25;
-    cloudPosition.y = random(height);
+    cloudPosition.y = random(0,175);
   
   }
     
