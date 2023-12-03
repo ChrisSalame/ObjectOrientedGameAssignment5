@@ -4,6 +4,7 @@ class waterLevel{
   PVector waterLevelPosition;
   PVector waterLevelVelocity;
   PVector waterLevelDown;
+  PVector randomPV;
   
   //This constructor helps define the values that go inside of the PVectors previously made so that 
   //they are ready to be used in the following voids
@@ -44,6 +45,10 @@ class waterLevel{
       text("YOU LOSE", 80, 120);
       println("Press any key to restart");
       waterLevelPosition.y = 180;
+      randomPV = PVector.random2D();
+      fill(227, 220, 79);
+      circle(randomPV.x,randomPV.y,20);
+      print(randomPV);
       mousePressed = false;
       wLMaxHeight = true;
       flagKey = 0;
