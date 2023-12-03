@@ -9,7 +9,7 @@ class waterLevel{
   //they are ready to be used in the following voids
     waterLevel(){
   waterLevelPosition = new PVector(0,390);
-  waterLevelVelocity = new PVector(0,-0.75);
+  waterLevelVelocity = new PVector(0,-1);
   waterLevelDown = new PVector(0,1.75);
   }
   //this void is what has the water level move from bottom upwards
@@ -26,8 +26,13 @@ class waterLevel{
   }
   //This is what draws the water
   void waterDrawing() {
+    fill(0,0,0);
+    float WHD = dist(310,185,310,waterLevelPosition.y); 
+    textSize(14);
+    text("Distance between Water and Head", 190, 20);
+    text(WHD, 350, 40);
     noStroke();
-    fill(66, 215, 245);
+    fill(66, 215, 245,215);
     rect(waterLevelPosition.x -25, waterLevelPosition.y , waterLevelPosition.x + 450, waterLevelPosition.y+850);
   
   }

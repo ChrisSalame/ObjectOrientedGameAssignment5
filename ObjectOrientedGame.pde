@@ -5,7 +5,6 @@ cloud CL= new cloud();
 Rain R = new Rain();
 flag F = new flag();
 shark S = new shark();
-
 weatherMan W = new weatherMan();
 
   boolean wLMaxHeight = false;
@@ -22,13 +21,11 @@ void setup(){
   
   //This sets up th ergb settings which are used for the background so it changes color when the 
   //sun is used as well as seting up the neccacary variables for the flag
-   r = 72;
-   g = 116;
-   b = 184;
-   F.flagSetup();
-  
-  
-  
+  r = 72;
+  g = 116;
+  b = 184;
+  F.flagSetup();
+
 }
 
 void draw(){
@@ -50,6 +47,8 @@ void draw(){
   rect(275,225, 200, 20);
   
   fill(145, 196, 230);
+  
+  
   
   //This draws the player character, the water level, the water movement and the loss screen if it occurs.
   W.character();
