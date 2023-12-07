@@ -18,6 +18,9 @@ class Rain{
   void rainSpawner(){
     rainDropX = startingX;
     rainDropY += fallSpeedY;
+    //This grabs the size of an array list and prints the size at the bottom
+    int arrayListSize = rainDrops.size();
+    println(arrayListSize);
   }
    
     //This void is where the rain is draw. There are two loops which each draw rain drops. The if
