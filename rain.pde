@@ -4,6 +4,7 @@
 //that the particles have a random x value, This changes each frame making the rain appear random.
 ArrayList<Rain> rainDrops = new ArrayList<Rain>();
 
+//these floats are what are used to have the raindrops fall on the screen while they are randomly generated
 float startingX = random(0,400);
 float fallSpeedY = 2.5;
 

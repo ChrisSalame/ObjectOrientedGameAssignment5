@@ -7,6 +7,7 @@ flag F = new flag();
 shark S = new shark();
 weatherMan W = new weatherMan();
 
+//this sets some of the variables which will be used for the water level and the background 
   boolean wLMaxHeight = false;
   boolean wLReset = false;
   float r;
@@ -14,10 +15,10 @@ weatherMan W = new weatherMan();
   float b;
 
 void setup(){
+  //This draws the background and sets the framerate
   size(400,400);
   background(99, 171, 219);
   frameRate(30);
-  println("Press the mouse to reduce water level");
   
   //This sets up th ergb settings which are used for the background so it changes color when the 
   //sun is used as well as seting up the neccacary variables for the flag
@@ -29,7 +30,10 @@ void setup(){
 }
 
 void draw(){
+  //This redraws the background with the new colors
   background(r,g,b);
+  //this shows the player the instructions
+  println("Press the mouse to reduce water level");
   //This starts the clouds movement in the background of the picture using PVector as well as
   // drawing the flagpole that stands behind the player
    CL.cloudMovement();
@@ -45,7 +49,6 @@ void draw(){
   rect(300,225, 175, 40);
   fill(151, 163, 173);
   rect(275,225, 200, 20);
-  
   fill(145, 196, 230);
   
   
@@ -68,6 +71,7 @@ void draw(){
     g = 179;
     b = 235;
   }else {
+    //this draws the rain,reduces thge water level and changes the background color
     R.rainSpawner();
     R.rainShower();
     wL.waterDrawing();
@@ -75,7 +79,7 @@ void draw(){
     g = 116;
     b = 184;
   }
-  
+  //This calls the void where the shark is drawn
   if (wLMaxHeight == true){
   S.sharkDrawing();
   }

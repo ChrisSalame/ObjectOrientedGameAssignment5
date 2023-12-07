@@ -1,10 +1,14 @@
+//These are the floats that are manipulated to draw the shark
 float sharkCenterX = mouseX;
 float sharkCenterY = mouseY;
+
 class shark {
 
 
-  
+  //This is what draws the shark on the lose screen
   void sharkDrawing(){
+    
+    //This is what uses the constrain function to prevent the shark from going offscreen with the mouse x and y
     float sharkCenterX = constrain(mouseX,100,300);
     float sharkCenterY = constrain(mouseY,100,300);
     fill(13, 144, 191);
